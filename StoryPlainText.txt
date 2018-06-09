@@ -1,0 +1,40 @@
+William and Candace are married.
+Their son is Sam.
+William, Candace, and Sam live in Florida.
+William and Candace intend Sam to attend college in Florida.
+William and Candace want Sam to learn many things.
+Sam intends to make friends.
+Sam intends to prepare his life to have a family.
+Sam applies to college.
+Sam attends to college.
+Sam meets many friends.
+
+A few of Sam's friends are threatened with sickness and cannot get health insurance.  They nearly die.
+A few of Sam's friends are threatened by home forclosure.
+Sam cares for his friends.
+Sam learns about a fragile system.
+Sam wants to make a difference.
+
+Sam meets a community of sustainable educators.
+The community buys some land for a farm.
+Sam learns the value of sustainable living.
+Sam intends his family to be sustainable.
+
+Sam learns computer science and enjoys the challenge and power it gives.
+He learns a lot about Strong Artificial Intelligence.
+
+Sam learns about farming.
+
+verbs: intend, apply, meet, threaten, care, learn, buy
+
+
+Endings:
+Sam applies to college in computer science. (sam must sacrifice his desire to live sustainably)
+Sam makes breakthroughs in Strong AI.
+
+Sam buys some land and starts a sustainable farm. (sam must sacrifice his desire to make a difference)
+He can now provide a life for his family.  
+
+Still in Florida, Sam learns his family is threatened. (sam must sacrifice his desire to live sustainably and make a difference)
+Sam cares for his family.
+

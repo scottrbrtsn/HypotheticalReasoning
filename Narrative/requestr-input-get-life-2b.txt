@@ -1,0 +1,105 @@
+; input for ReQUESTr knowledge graph
+;  Model from get-life.pddl
+; - First list the NODES:
+;	Node:[Number]:[Type]:[Content]
+; - Then the ARCS:
+;	Arc:[Type]:[From-node]:[To-node]
+; - Node numbers/order doesn't matter, they're just keys for Arcs to reference
+; - Arc order doesn't matter
+; - Ignores empty lines and lines starting with semicolons
+
+; NODES
+Node:1:Goal:Candace wants a child.
+Node:2:Goal:William wants a child.
+Node:3:Goal:Mary wants a job.
+Node:4:Goal:University-of-Denver wants to accept Mary.
+Node:5:Goal:Apple wants to reject Mary.
+Node:6:Goal:Google wants to reject Mary.
+Node:7:Goal:Mary wants to be educated.
+Node:8:Goal:Sam wants to live in Idaho.
+
+Node:9:Event:William and Candace get married.
+Node:10:Event:William and Candace have a child named Mary.
+Node:11:Event:Mary grows up.
+Node:12:Event:Mary moves to Denver.
+Node:13:Event:Sam grows up.
+Node:14:Event:Mary cares for Sam.
+Node:16:Event:Mary applies to the University of Denver.
+Node:17:Event:Mary attends the University of Denver.
+Node:18:Event:Mary applies to Apple.
+Node:19:Event:Mary applies to Google.
+Node:20:Event:Google rejects Mary.
+Node:21:Event:Apple rejects Mary.
+Node:22:Event:University of Denver accepts Mary.
+Node:41:Event:Sam gets sick.
+Node:40:Event:Sam moves to Idaho.
+
+
+
+
+
+Node:23:State:William loves Candace.
+Node:24:State:Candace loves William.
+Node:25:State:Candace is in New Orleans.
+Node:26:State:William is in New Orleans.
+Node:27:State:Candace is married to William.
+Node:28:State:William is married to Candace.
+Node:29:State:Mary exists.
+Node:30:State:Mary is in New Orleans.
+Node:31:State:Mary is in Denver.
+Node:32:State:Sam is in Denver.
+Node:33:State:Sam exists.
+Node:34:State:Mary is educated.
+Node:35:State:Mary and Sam share intimacy.
+
+
+
+
+
+
+
+; ARCS
+Arc:Outcome:1:10
+Arc:Outcome:2:10
+Arc:Outcome:3:18
+Arc:Outcome:3:19
+Arc:Outcome:4:22
+Arc:Outcome:5:21
+Arc:Outcome:6:20
+Arc:Outcome:7:16
+Arc:Outcome:8:40
+
+
+Arc:Initiate:27:1
+Arc:Initiate:28:1
+Arc:Initiate:11:3
+Arc:Initiate:21:7
+Arc:Initiate:13:8
+
+Arc:Reason:7:3
+
+
+Arc:Consequence:18:21
+Arc:Consequence:19:20
+Arc:Consequence:23:9
+Arc:Consequence:24:9
+Arc:Consequence:25:9
+Arc:Consequence:26:9
+Arc:Consequence:9:27
+Arc:Consequence:9:28
+Arc:Consequence:27:1
+Arc:Consequence:28:2
+Arc:Consequence:10:28
+Arc:Consequence:29:11
+Arc:Consequence:16:22
+Arc:Consequence:22:12
+Arc:Consequence:12:31
+Arc:Consequence:31:17
+Arc:Consequence:22:17
+Arc:Consequence:33:13
+Arc:Consequence:13:41
+Arc:Consequence:41:14
+Arc:Consequence:14:35
+
+
+

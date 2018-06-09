@@ -1,0 +1,58 @@
+; Example input for ReQUESTr knowledge graph
+; - First list the NODES:
+;	Node:[Number]:[Type]:[Content]
+; - Then the ARCS:
+;	Arc:[Type]:[From-node]:[To-node]
+; - Node numbers/order doesn't matter, they're just keys for Arcs to reference
+; - Arc order doesn't matter
+; - Ignores empty lines and lines starting with semicolons
+
+; NODES
+Node:1:Goal:Thief wants to go to the crown room
+Node:2:Goal:Thief wants to go to the hall
+Node:3:Goal:Thief wants to go to the jail
+Node:4:Goal:Thief wants to pick-pocket Guard
+Node:5:Goal:Thief wants to open the jail from the hall
+Node:6:Goal:Thief wants to free the Prisoner
+Node:7:Event:Guard gets distracted
+Node:8:Event:Thief goes to the crown room
+Node:9:Event:Thief pick-pockets Guard
+Node:10:Event:Thief goes to the hall
+Node:11:Event:Thief opens the jail from the hall
+Node:12:Event:Thief goes inside the jail
+Node:13:Event:Thief frees Prisoner
+Node:14:State:Guard is distracted
+Node:15:State:Thief is at crown room
+Node:16:State:Thief has the jail key
+Node:17:State:Thief is at the hall
+Node:18:State:Jail is accessible
+Node:19:State:Thief is inside the jail
+Node:20:State:Prisoner is free
+
+; ARCS
+Arc:Reason:1:2
+Arc:Reason:1:4
+Arc:Outcome:1:8
+Arc:Reason:2:3
+Arc:Outcome:2:10
+Arc:Reason:3:6
+Arc:Reason:4:5
+Arc:Outcome:4:9
+Arc:Reason:5:3
+Arc:Outcome:5:11
+Arc:Outcome:6:13
+Arc:Consequence:7:14
+Arc:Consequence:8:15
+Arc:Consequence:9:16
+Arc:Consequence:10:17
+Arc:Consequence:11:18
+Arc:Consequence:12:19
+Arc:Consequence:13:20
+Arc:Consequence:14:9
+Arc:Consequence:15:9
+Arc:Consequence:15:10
+Arc:Consequence:16:11
+Arc:Consequence:17:11
+Arc:Consequence:17:12
+Arc:Consequence:18:12
+Arc:Consequence:19:13

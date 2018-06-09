@@ -1,0 +1,7 @@
+Consent
+Instructions
+Training Task
+Split pane
+ - Story left (one line at time)
+ - questions right
+ ~ 4 questions, 2 sanity check/2 real questions, 6 answers
