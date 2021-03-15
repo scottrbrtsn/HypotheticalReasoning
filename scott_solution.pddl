@@ -1,3 +1,7 @@
 (define (plan get-life-solution)
   (:problem get-life)
-  (:steps (grow-up candace)))
+  (:steps (marry william candace new-orleans)
+          (have-child william candace sam new-orleans)
+          (grow-up sam)
+          (apply sam google)
+          (move sam new-orleans denver)))

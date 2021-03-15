@@ -30,9 +30,9 @@
          (exists farm)
          (exists stanford)
          (intends sam (attending sam denver google))
-         (intends sam (married))
+         (intends sam (married sam))
          (intends mary (at mary idaho))
-         (intends mary (married))
+         (intends mary (married mary))
    )
 
 (:goal (and 

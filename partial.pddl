@@ -3,6 +3,7 @@
     (:problem get-life)
 
     (:steps 
-        (marry william candace new-orleans)
+        (move william new-orleans denver)
+        (move candace new-orleans idaho)
     )
 )

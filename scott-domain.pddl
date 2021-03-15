@@ -113,41 +113,45 @@
 ;; Two characters meet.
   (:action meet
     :parameters   (?first - character ?second - character ?location - location)
-    :precondition (and (alive ?first)
-     		  						(alive ?second)
-											(grown-up ?first)
-											(grown-up ?second)
-											(at ?first ?location)
-											(at ?second ?location)
-											(not (knows ?first ?second))
-											(not (knows ?second ?first))
-									)
+    :precondition (and 
+                (alive ?first)
+                (alive ?second)
+                (grown-up ?first)
+                (grown-up ?second)
+                (at ?first ?location)
+                (at ?second ?location)
+                (not (knows ?first ?second))
+                (not (knows ?second ?first))
+                )
     :effect (and (knows ?first ?second)
-		 						(knows ?second ?first)
-		 				)
+        (knows ?second ?first)  
+        )
     :agents (?first ?second)
 )
 
 ;; Two characters who are in love get married.
   (:action marry
-    :parameters   (?groom - male ?bride - female ?location - location)
+    :parameters   (
+                    ?groom - male 
+                    ?bride - female 
+                    ?location - location
+                    )
     :precondition (and 
                     (alive ?groom)
+                    (alive ?bride)
                     (grown-up ?groom)
                     (grown-up ?bride)
                     (not (married ?groom))
                     (not (married ?bride))
                     (at ?groom ?location)
-                    (loves ?groom ?bride)
-                    (alive ?bride)
+                   (loves ?groom ?bride)
                     (at ?bride ?location)
                     (loves ?bride ?groom)
 
                    )
-    :effect       (and (not (single ?groom))
+    :effect       (and 
                        (married ?groom)
                        (marriedto ?groom ?bride)
-                       (not (single ?bride))
                        (married ?bride)
                        (marriedto ?bride ?groom)
                    )
@@ -176,17 +180,28 @@
 
 ;; Two married characters have a child
   (:action have-child
-    :parameters   (?male - male ?female - female ?character - character)
-    :precondition (and (alive ?male)
-											 (grown-up ?male)
-											 (grown-up ?female)
-                       (marriedto ?male ?female)
-                       (marriedto ?female ?male)
+    :parameters   (
+            ?male - male 
+            ?female - female 
+            ?character - character
+            ?location - location
+            )
+    
+    :precondition (and
+                    (alive ?male)
+                    (at ?male ?location)
+                    (at ?female ?location)
+                    (grown-up ?male)
+                    (grown-up ?female)
+                    (marriedto ?male ?female)
+                    (marriedto ?female ?male)
                    )
-    :effect       (and (alive ?character)
-    									 (not (grown-up ?character))
-    							)
-    							
+    :effect       (and
+                    (at ?character ?location)
+                    (alive ?character)
+                    (not (grown-up ?character))
+                    )
+
    )
 
 	
